@@ -19,4 +19,4 @@ Some Notes:
 - There is no X Carriage included as of this writing. Prototypes used an older carriage I had assembled on the X axis, this will be coming soon. Print a third set of the Y carriage if you want to set this up for motion
 - There are no drive pulleys included, I am using these ones for now: http://www.thingiverse.com/thing:49971	- note that you will need to print one that is flipped on the X or Y axis so the threading is opposite for the right hand drive so that the filament winds correctly
 - There are no idler pulleys included, I am using these ones for now: http://www.thingiverse.com/thing:155018
-- When printing the gantry corner braces, print two of them inverted on the X axis to make the opposite corners
+- When printing the gantry corner braces, print two of them inverted and two of the opposed ones
