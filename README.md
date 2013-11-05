@@ -10,6 +10,14 @@ I believe that the #8-32 hardware for assembly should be easily substituted for 
 
 As of this writing (November 1st, 2013) I expect a lot of revisions to this design - print and build at your own risk!
 
+----
+Some updates from the original set of parts have been merged into the master branch. Notably improved corner pieces for the gantry which will ensure a more rigid structure.
+
+Nov 5th 2013 - I am merging the Y carriage development branch into the master as it represents a far superior version of the system. The carriage now uses a four-point linear interface between the carriage and the tubing. Bearing mounts are included in the more robust and less whimsically designed carriage. Bolt mounts are supported and sturdy nut traps added to the X carrier interface.
+Assembly is simplified and bearing tension easier to adjust with the new design.
+The x carriage is still missing from the design, and the X carrier that exists in the repository is incompatible with the new Y carriers - I may remove it, either way, don't use it unless you are building my initial test model.
+----
+
 Some Notes:
 
 - Photos and demos of the assembly can be found at the following imgur album: http://imgur.com/a/7Lus7
