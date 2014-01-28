@@ -35,13 +35,14 @@ difference() {
 difference() {
 	difference() {	// outer shell
 	
-		cube([kWallThickness + hwTubeThickness + hwTubeOutsideDiameter, kInnerStub, hwTubeOutsideDiameter]);
+		cube([kWallThickness + hwTubeOutsideDiameter + kWallThickness, kInnerStub, hwTubeOutsideDiameter]);
 		translate([kWallThickness, 0,0])
 			cube([hwTubeOutsideDiameter, kInnerStub, hwTubeOutsideDiameter - kWallThickness]);
 		}
 	// bolt hole
-	translate([0, 4.3, 7.6]) rotate(a=[0,90,0])
-		cylinder(h = hSize * 2, r = hwBoltDiameter, center = true);			
+color([0,0,1])
+	translate([hwTubeOutsideDiameter /2 + kWallThickness, 4.3, 7.6]) rotate(a=[0,90,0])
+		cylinder(h = (kWallThickness + hwTubeOutsideDiameter + kWallThickness ) , r = hwBoltDiameter, center = true);			
 }
 
 
