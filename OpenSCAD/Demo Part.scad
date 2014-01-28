@@ -10,9 +10,9 @@ hwTubeThickness = (hwTubeOutsideDiameter - hwTubeInsideDiameter) / 2;
 
 // Design Metrics
 
-kWallThickness = 2.5;	// thickness of shell walls
-kInnerStub = 20;		// how far the projection goes inside the tube
-
+kWallThickness = 2.5;		// thickness of shell walls
+kInnerStub = 20;				// how far the projection goes inside the tube
+kBeadCompensation = 0.5 / 2; // nozzle size divided in half
 
 
 hSize = kWallThickness + hwTubeOutsideDiameter + hwTubeThickness;
@@ -26,7 +26,7 @@ difference() {
 	// bolt hole
 	translate([0, 4.3, 7.6]) {
 		rotate(a=[0,90,0]){
-			cylinder(h = hSize * 2, r = hwBoltDiameter, center = true);
+			cylinder(h = hSize * 2, r = hwBoltDiameter + kBeadCompensation, center = true, $fn = 16);
 		}
 	}
 }
@@ -47,9 +47,14 @@ polygon( points = [[0,0],[0,3],[1.7,3.3],[3.7,3.6],[5.6,3.8],[7.6,3.8],[9.6,3.8]
 			cube([hwTubeOutsideDiameter, kInnerStub, hwTubeOutsideDiameter - kWallThickness +1]);
 		}
 	// bolt hole
-color([0,0,1])
 	translate([hwTubeOutsideDiameter /2 + kWallThickness, 4.3, 7.6]) rotate(a=[0,90,0])
-		cylinder(h = (kWallThickness + hwTubeOutsideDiameter + kWallThickness + 5) , r = hwBoltDiameter, center = true);			
+		cylinder(h = (kWallThickness + hwTubeOutsideDiameter + kWallThickness + 5) , r = hwBoltDiameter + kBeadCompensation, center = true, $fn = 16);	
+	// washer inset
+	translate([hwTubeOutsideDiameter + kWallThickness +3, 4.3, 7.6]) rotate(a=[0,90,0])
+		cylinder(h = (kWallThickness) , r = hwWasherDiamter + kBeadCompensation, center = true, $fn = 16);	
+	// nut inset
+	translate([-1, 4.3, 7.6]) rotate(a=[0,90,0])
+		cylinder(h = (kWallThickness) , r = hwWasherDiamter + kBeadCompensation, center = true, $fn = 6);		
 }
 
 
