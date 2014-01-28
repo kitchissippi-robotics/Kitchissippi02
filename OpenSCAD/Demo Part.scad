@@ -26,8 +26,8 @@ difference() {
 		cube([hwTubeInsideDiameter,kInnerStub,hwTubeInsideDiameter]);	
 	// bolt hole
 	translate([0, 4.3, 7.6]) {
-		rotate(a=[0,90,0]){
-			cylinder(h = hSize * 2, r = hwBoltDiameter + kBeadCompensation, center = true, $fn = 16);
+		rotate(a=[90,0,90]){
+			cylinder(h = hSize * 2, r = hwBoltDiameter + kBeadCompensation, center = true, $fn = 6);
 		}
 	}
 }
@@ -48,14 +48,17 @@ polygon( points = [[0,0],[0,3],[1.7,3.3],[3.7,3.6],[5.6,3.8],[7.6,3.8],[9.6,3.8]
 			cube([hwTubeOutsideDiameter, kOuterStub, hwTubeOutsideDiameter - kWallThickness +1]);
 		}
 	// bolt hole
-	translate([hwTubeOutsideDiameter /2 + kWallThickness, 4.3, 7.6]) rotate(a=[0,90,0])
-		cylinder(h = (kWallThickness + hwTubeOutsideDiameter + kWallThickness + 5) , r = hwBoltDiameter + kBeadCompensation, center = true, $fn = 16);	
+	translate([hwTubeOutsideDiameter /2 + kWallThickness, 4.3, 7.6]) rotate(a=[90,0,90])
+		cylinder(h = (kWallThickness + hwTubeOutsideDiameter + kWallThickness + 5) , r = hwBoltDiameter + kBeadCompensation, center = true, $fn = 6);	
 	// washer inset
 	translate([hwTubeOutsideDiameter + kWallThickness +4.4, 4.3, 7.6]) rotate(a=[0,90,0])
 		cylinder(h = (kWallThickness *2) , r = hwWasherDiamter + kBeadCompensation, center = true, $fn = 16);	
 	// nut inset
-	translate([-0.7, 4.3, 7.6]) rotate(a=[0,90,0])
-		cylinder(h = (kWallThickness) , r = hwWasherDiamter + kBeadCompensation, center = true, $fn = 6);		
+	translate([-0.7, 4.3, 7.6]) rotate(a=[90,0,90])
+		cylinder(h = (kWallThickness) , r = hwWasherDiamter + kBeadCompensation, center = true, $fn = 6);
+	// top cutout
+	translate([2.5, 0, 10])
+		cube([hwTubeOutsideDiameter, 15, 20]);		
 }
 
 
