@@ -4,7 +4,7 @@ hwBoltDiameter = 4 / 2;
 hwNutDiameter = 10.5 / 2;
 hwWasherDiamter = 11.2 / 2;
 
-hwTubeOutsideDiameter = 19.1;
+hwTubeOutsideDiameter = 19.5;
 hwTubeInsideDiameter = 15.5;
 hwTubeThickness = (hwTubeOutsideDiameter - hwTubeInsideDiameter) / 2;
 
