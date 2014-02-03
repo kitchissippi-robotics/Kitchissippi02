@@ -1,22 +1,22 @@
-Kitchissippi02
-==============
+Kitchissippi02 - aka K02
+========================
 
 An open source CoreXY based 3D Printer conceived, designed and built in Kitchissippi, hence the name. The printer may get a more official name once it is further along the build process.
-It is my second printer design, the first being incomplete in favour of this one.
+It is my second 3D printer design, the first being incomplete in favour of this one.
 
 The basic design uses common hardware store 3/4" square aluminum tubing and #8-32 nuts and bolts. There is a bit of a mix involved however. NEMA17 motors use M3 hardare, as do the related filament drive pulleys.
 I would prefer to use metric exclusively, however the hardware is scarce to find in the average store here, despite the official measurement system.
 I believe that the #8-32 hardware for assembly should be easily substituted for M5 metric hardware without modifying the the source files but I have not tested this at all.
 
-As of this writing (November 1st, 2013) I expect a lot of revisions to this design - print and build at your own risk!
+As of this update (Feb 3rd, 2014) there is a lot of experimental work scattered throughout the repository right now - much revision is under way in the "Gold" fork currently.
+New parts will be more compact, finished and functional. The framing will be revised and work is being done to improve the CoreXY mechanism so that it is easier to print and less exposed.
+Work is being done to break down the components in to sub-features to create a more cohesive design and reduce development time for new / modified parts.
 
-----
-Some updates from the original set of parts have been merged into the master branch. Notably improved corner pieces for the gantry which will ensure a more rigid structure.
-
-Nov 5th 2013 - I am merging the Y carriage development branch into the master as it represents a far superior version of the system. The carriage now uses a four-point linear interface between the carriage and the tubing. Bearing mounts are included in the more robust and less whimsically designed carriage. Bolt mounts are supported and sturdy nut traps added to the X carrier interface.
-Assembly is simplified and bearing tension easier to adjust with the new design.
-The x carriage is still missing from the design, and the X carrier that exists in the repository is incompatible with the new Y carriers - I may remove it, either way, don't use it unless you are building my initial test model.
-----
+Sample photo of the new Y Axis Outside piece of the bearing carriage: Outside http://i.imgur.com/o7YBvRU.jpg and Inside http://i.imgur.com/Csz5eC0.jpg
+Some major functional changes on this part 
+- the carriage sits at a slightly lower profile on the rails
+- Y axis end-stop microswitch is mounted to the carriage and there is access to apply a zip tie for wire management
+- A small boom is included for attaching a cable chain to the carriage
 
 Some Notes:
 
