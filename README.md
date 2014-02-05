@@ -14,9 +14,10 @@ Work is being done to break down the components in to sub-features to create a m
 
 Sample photo of the new Y Axis Outside piece of the bearing carriage: Outside http://i.imgur.com/o7YBvRU.jpg and Inside http://i.imgur.com/Csz5eC0.jpg
 Some major functional changes on this part 
-- the carriage sits at a slightly lower profile on the rails
+- The carriage sits at a slightly lower profile on the rails
 - Y axis end-stop microswitch is mounted to the carriage and there is access to apply a zip tie for wire management
 - A small boom is included for attaching a cable chain to the carriage
+- Bolt access has been changed from the inside to the outside of the carriage to facilitate easier assembly and accces
 
 Some Notes:
 
